@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyberpunk Password Generator</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Boot-up animation -->
+  <div id="boot">
+    <div class="boot-screen">
+      <div class="boot-title">CYBERSECURE OS v9.7</div>
+      <div class="boot-lines">
+        <span>Initializing neural firewall...</span>
+        <span>Syncing quantum entropy cores...</span>
+        <span>Decrypting darknet handshake...</span>
+        <span>Loading UI modules...</span>
+      </div>
+      <div class="boot-bar"><span></span></div>
+      <div class="boot-tip">Press any key to continue</div>
+    </div>
+  </div>
+
+  <!-- Animated background -->
+  <canvas id="matrix"></canvas>
+
+  <main class="app">
+    <header class="topbar glass">
+      <div class="logo">NEON//GEN</div>
+      <div class="subtitle">Cyber Security Password Console</div>
+    </header>
+
+    <section class="grid">
+      <!-- Left: Generator -->
+      <section class="panel glass hover-glow">
+        <div class="panel-title">PASSWORD GENERATOR</div>
+
+        <div class="password-display">
+          <input id="passwordInput" type="password" placeholder="Click Generate to create a secure password" readonly />
+          <button id="toggleVisibility" class="icon-btn" title="Show/Hide">👁</button>
+          <button id="copyBtn" class="icon-btn" title="Copy">📋</button>
+        </div>
+
+        <div class="actions">
+          <button id="generateBtn" class="btn primary pulse">Generate Password</button>
+          <div id="statusText" class="status">Ready</div>
+        </div>
+
+        <div class="mode-row">
+          <label for="modeSelect">Mode:</label>
+          <select id="modeSelect" class="mode-select">
+            <option value="random">Random Password</option>
+            <option value="memorable">Memorable Password</option>
+          </select>
+        </div>
+
+        <div class="slider-row">
+          <label>Password Length: <span id="lengthValue">16</span></label>
+          <input id="lengthSlider" type="range" min="4" max="64" value="16"/>
+        </div>
+
+        <div class="options">
+          <label class="cyber-check"><input type="checkbox" id="optUpper" checked/><span></span>Uppercase</label>
+          <label class="cyber-check"><input type="checkbox" id="optLower" checked/><span></span>Lowercase</label>
+          <label class="cyber-check"><input type="checkbox" id="optNumbers" checked/><span></span>Numbers</label>
+          <label class="cyber-check"><input type="checkbox" id="optSymbols" checked/><span></span>Symbols</label>
+          <label class="cyber-check"><input type="checkbox" id="optExcludeSimilar"/><span></span>Exclude Similar</label>
+          <label class="cyber-check"><input type="checkbox" id="optNoRepeat"/><span></span>No Repeats</label>
+        </div>
+      </section>
+
+      <!-- Right: Analytics -->
+      <section class="panel glass terminal hover-glow">
+        <div class="panel-title">SECURITY ANALYTICS</div>
+
+        <div class="strength">
+          <div class="strength-bar"><span id="strengthBar"></span></div>
+          <div class="strength-label" id="strengthLabel">Strength: —</div>
+        </div>
+
+        <div class="security-level">
+          <span>Cyber Security Level</span>
+          <div class="level-meter">
+            <span id="levelFill"></span>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div>Entropy Score: <span id="entropyValue">0</span> bits</div>
+          <div>Crack Time: <span id="crackTime">—</span></div>
+        </div>
+
+        <div class="analysis" id="analysisText">
+          Generate a password to view security analysis.
+        </div>
+
+        <div class="scan">
+          <div class="scan-title">Encryption Scan</div>
+          <div class="scan-anim" id="scanAnim"><span></span></div>
+        </div>
+
+        <div class="quotes">
+          <div class="panel-title small">CYBER TIP</div>
+          <div id="quoteText"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
