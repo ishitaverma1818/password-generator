@@ -11,8 +11,8 @@ A zero-dependency, browser-based password generator and security analysis tool. 
 ![NEON//GEN Interface Preview](screenshot.png)
 
 ## 🚀 Live Demo & Repository
-* **Live App:** [View NEON//GEN Live](https://ishitaverma497.github.io/password-generator/)
-* **Repository:** [View Source Code](https://github.com/Ishitaverma497/password-generator/)
+* **Live App:** [View NEON//GEN Live](https://ishitaverma1818.github.io/password-generator/)
+* **Repository:** [View Source Code](https://github.com/ishitaverma1818/password-generator/)
 
 ## 🛡️ Security Architecture
 
@@ -36,4 +36,4 @@ No build step required.
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Ishitaverma497/password-generator.git](https://github.com/Ishitaverma497/password-generator.git)
+   git clone [https://github.com/ishitaverma1818/password-generator.git](https://github.com/ishitaverma1818/password-generator.git)
